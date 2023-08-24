@@ -13,7 +13,7 @@ from .models import Review
 #         label="Your Feedback:", max_length=200, widget=forms.Textarea)
 #     rating = forms.IntegerField(label="Your Rating:", min_value=1, max_value=5)
 
-# cerating a form related to a model object for a database
+# creating a form related to a model object for a database
 
 
 class ReviewForm(forms.ModelForm):

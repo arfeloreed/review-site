@@ -1,17 +1,9 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reviews</title>
+{% block page_title %}Your Review{% endblock page_title %}
 
-  <link rel="stylesheet" href="{% static 'reviews/index.css' %}">
-</head>
-
-<body>
-  <h1>Your reviews go here.</h1>
+{% block body_content %}
+  <h1>Write your review here.</h1>
   <form action="/" method="POST">
     {% csrf_token %}
     {% for field in form %}
@@ -23,6 +15,4 @@
     {% endfor %}
     <button type="submit">Submit</button>
   </form>
-</body>
-
-</html>
+{% endblock body_content %}
